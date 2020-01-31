@@ -3,6 +3,7 @@ package org.academiadecodigo.carcrash;
 import org.academiadecodigo.carcrash.cars.Car;
 import org.academiadecodigo.carcrash.cars.CarFactory;
 import org.academiadecodigo.carcrash.field.Field;
+import org.academiadecodigo.carcrash.field.Position;
 
 public class Game {
 
@@ -59,12 +60,18 @@ public class Game {
 
     private void moveAllCars() {
 
+
         for (int i = 0; i < cars.length; i++) {
-            cars[i].moveRandom();
+            //System.out.println(cars[i] + "car i");
+            for (int x = 0; x < cars.length; x++) {
+                //System.out.println(cars[x] + "car x");
+                if (cars[i].getPos().getCol() == cars[x].getPos().getCol() && cars[i].getPos().getRow() == cars[i].getPos().getRow()) {
+                    cars[i].setIsCrashed(true);
+                }
+            } if (!cars[i].isCrashed()) {
+                 cars[i].moveRandom(); 
+            }
         }
-
-
-
 
 
     }

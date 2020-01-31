@@ -6,17 +6,12 @@ public abstract class Car {
 
     /** The position of the car on the grid */
     private Position pos;
-
-
-
-    //private boolean isCrashed;
+    private boolean isCrashed;
 
     public Car(Position position){
 
         pos = position;
-
-
-        //isCrashed = false;
+        isCrashed = false;
     }
 
 
@@ -27,15 +22,19 @@ public abstract class Car {
 
     public boolean isCrashed() {
 
-        return false;
+        return isCrashed;
+    }
+
+    public void setIsCrashed(boolean isCrashed) {
+        this.isCrashed = isCrashed;
     }
 
     /*public boolean crashed(Car car) {
         if (pos.getCol() == car.pos.getCol() && pos.getRow() == car.pos.getRow()) {
-            isCrashed = true;
+            isCrashed() = true;
             return true;
         } else {
-            isCrashed = false;
+
             return false;
         }
     }*/
