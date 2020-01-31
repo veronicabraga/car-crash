@@ -7,9 +7,9 @@ public class Position {
     //private int width = 4;
     //private int height = 4;
 
-    public Position(int column, int row) {
-        this.column = column;
-        this.row = row;
+    public Position() {
+        this.column = (int) (Math.random() * (Field.getWidth()) );
+        this.row = (int) (Math.random() * (Field.getHeight()));;
     }
 
     public int getCol() {

@@ -1,16 +1,20 @@
 package org.academiadecodigo.carcrash;
 
+import org.academiadecodigo.carcrash.cars.Bmw;
 import org.academiadecodigo.carcrash.field.Position;
 
 public class Test {
 
     public static void main(String[] args) {
 
-        Position position1 = new Position(1, 2);
+       // Bmw one = new Bmw();
+       // System.out.println(one);
 
-        position1.turnLeft();
+        //Position position1 = new Position();
 
-        System.out.println(position1.getCol());
+        //position1.turnLeft();
+
+        //System.out.println(position1.getCol());
 
         //position1.turnRight();
         //System.out.println(position1.getCol());

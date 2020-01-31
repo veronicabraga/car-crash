@@ -59,6 +59,14 @@ public class Game {
 
     private void moveAllCars() {
 
+        for (int i = 0; i < cars.length; i++) {
+            cars[i].moveRandom();
+        }
+
+
+
+
+
     }
 
 }

@@ -6,10 +6,16 @@ public abstract class Car {
 
     /** The position of the car on the grid */
     private Position pos;
+
+
+
     //private boolean isCrashed;
 
-    public Car(int column, int row){
-        pos = new Position(column, row);
+    public Car(Position position){
+
+        pos = position;
+
+
         //isCrashed = false;
     }
 
@@ -33,4 +39,27 @@ public abstract class Car {
             return false;
         }
     }*/
+
+    public void moveRandom() {
+
+        int index = (int) (Math.random() * 4);
+
+        switch(index) {
+            case 0:
+                pos.turnRight();
+                break;
+
+            case 1:
+                pos.turnLeft();
+                break;
+
+            case 2:
+                pos.goAhead();
+                break;
+
+            case 3:
+                pos.goBehind();
+                break;
+        }
+    }
 }

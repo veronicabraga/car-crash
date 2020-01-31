@@ -4,7 +4,7 @@ public class CarFactory {
 
     public static  Car getNewCar() {
 
-        return null;
+        return new Bmw();
 
     }
 }
