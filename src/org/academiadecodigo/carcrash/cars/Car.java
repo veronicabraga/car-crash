@@ -17,6 +17,7 @@ public abstract class Car {
 
 
     public Position getPos() {
+
         return pos;
     }
 

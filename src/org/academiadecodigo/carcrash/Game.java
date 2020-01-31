@@ -65,9 +65,12 @@ public class Game {
             //System.out.println(cars[i] + "car i");
             for (int x = 0; x < cars.length; x++) {
                 //System.out.println(cars[x] + "car x");
-                if (cars[i].getPos().getCol() == cars[x].getPos().getCol() && cars[i].getPos().getRow() == cars[i].getPos().getRow()) {
-                    cars[i].setIsCrashed(true);
+
+
+                if (!(i == x) && cars[i].getPos().getCol() == cars[x].getPos().getCol() && cars[i].getPos().getRow() == cars[x].getPos().getRow()) {
+                        cars[i].setIsCrashed(true);
                 }
+
             } if (!cars[i].isCrashed()) {
                  cars[i].moveRandom(); 
             }
@@ -77,3 +80,5 @@ public class Game {
     }
 
 }
+
+// (cars[i].equals(cars[x]))
