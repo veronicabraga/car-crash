@@ -7,6 +7,7 @@ public abstract class Car {
     /** The position of the car on the grid */
     private Position pos;
     private boolean isCrashed;
+    private int speed;
 
     public Car(Position position){
 

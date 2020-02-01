@@ -7,7 +7,7 @@ import org.academiadecodigo.carcrash.field.Position;
 
 public class Game {
 
-    public static final int MANUFACTURED_CARS = 20;
+    public static final int MANUFACTURED_CARS = 50;
 
     /** Container of Cars */
     private Car[] cars;
@@ -67,7 +67,7 @@ public class Game {
                 //System.out.println(cars[x] + "car x");
 
 
-                if (!(i == x) && cars[i].getPos().getCol() == cars[x].getPos().getCol() && cars[i].getPos().getRow() == cars[x].getPos().getRow()) {
+                if (i != x && cars[i].getPos().getCol() == cars[x].getPos().getCol() && cars[i].getPos().getRow() == cars[x].getPos().getRow()) {
                         cars[i].setIsCrashed(true);
                 }
 

@@ -2,18 +2,19 @@ package org.academiadecodigo.carcrash.cars;
 
 import org.academiadecodigo.carcrash.field.Position;
 
-public class Bmw extends Car{
+public class Renault extends Car{
     private int speed;
 
-    public Bmw() {
-
+    public Renault() {
         super(new Position());
-        speed = 3;
+        speed = 2;
     }
 
 
     @Override
     public String toString() {
-        return "b";
-     }
+        return "r";
+    }
 }
+
+
