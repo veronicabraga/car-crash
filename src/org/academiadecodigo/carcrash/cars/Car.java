@@ -15,8 +15,6 @@ public abstract class Car {
         isCrashed = false;
     }
 
-
-
     public Position getPos() {
 
         return pos;
@@ -31,15 +29,10 @@ public abstract class Car {
         this.isCrashed = isCrashed;
     }
 
-    /*public boolean crashed(Car car) {
-        if (pos.getCol() == car.pos.getCol() && pos.getRow() == car.pos.getRow()) {
-            isCrashed() = true;
-            return true;
-        } else {
 
-            return false;
-        }
-    }*/
+    public int getSpeed() {
+        return speed;
+    }
 
     public void moveRandom() {
 
@@ -47,19 +40,19 @@ public abstract class Car {
 
         switch(index) {
             case 0:
-                pos.turnRight();
+                pos.turnRight(getSpeed());
                 break;
 
             case 1:
-                pos.turnLeft();
+                pos.turnLeft(getSpeed());
                 break;
 
             case 2:
-                pos.goAhead();
+                pos.goAhead(getSpeed());
                 break;
 
             case 3:
-                pos.goBehind();
+                pos.goBack(getSpeed());
                 break;
         }
     }

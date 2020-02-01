@@ -22,34 +22,30 @@ public class Position {
         return row;
     }
 
-    public void turnRight() {
+    public void turnRight(int speed) {
 
-        if (!(column == Field.getWidth() - 1)) {
-            column++;
+        if (column <= Field.getWidth() - 1 - speed) {
+            column += speed;
         }
-        /*else {
-            System.out.println("Limit exceeded, you can not turn right.");
-        }*/
+
     }
 
-    public void turnLeft() {
-        if (!(column == 0)) {
-            column--;
+    public void turnLeft(int speed) {
+        if (column - speed > 0) {
+            column -= speed;
         }
-        /*else {
-            System.out.println("Limit exceeded, you can not turn left.");
-        }*/
+
     }
 
-    public void goAhead() {
-        if (!(row == 0)) {
-            row--;
+    public void goAhead(int speed) {
+        if (row - speed > 0) {
+            row -= speed;
         }
     }
 
-    public void goBehind() {
-        if (!(row == Field.getHeight() - 1)) {
-            row++;
+    public void goBack(int speed) {
+        if (row <= Field.getHeight() - 1 - speed) {
+            row += speed;
         }
 
     }

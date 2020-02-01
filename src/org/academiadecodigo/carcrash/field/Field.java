@@ -59,6 +59,7 @@ public final class Field {
         for (Car c : cars) {
 
             if (!c.isCrashed()) {
+
                 screenWriter.drawString(c.getPos().getCol(), c.getPos().getRow(), c.toString());
             } else {
                 screen.putString(c.getPos().getCol(), c.getPos().getRow(), c.toString(), Terminal.Color.WHITE, Terminal.Color.RED, ScreenCharacterStyle.Blinking);
